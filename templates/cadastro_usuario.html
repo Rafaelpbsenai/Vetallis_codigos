@@ -15,8 +15,8 @@
     <div class="container d-flex align-items-center justify-content-center cadastro-container">
         <img src="/static/imagens/vetalis_branca_sem_fundo.png" alt="logo" class="logo">
         <div class=" cadastro-card text-center ">
-            <h2 class="mb-3 mt-4 text-white "><strong>VETALLIS</strong></h2>
-            <p class=" text-white  text-uppercase font-weight-bold">Cadastre-se</p>
+            <h2 class="mb-1 mt-4 text-white "><strong>VETALLIS</strong></h2>
+            <p class=" mb-0 text-white  text-uppercase font-weight-bold">Cadastre-se</p>
 
             {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -67,6 +67,16 @@
                     </div>
                 </div>
                 <div class="mb-2 text-start">
+                    <label class="form-label text-white">Confirmar de senha</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-secundary">
+                            <i class="bi bi-key-fill text-white"></i>
+                        </span>
+                        <input type="password" name="confirmar_senha" class="dados_formulario" placeholder="Confirme sua senha"
+                            required>
+                    </div>
+                </div>
+                <div class="mb-2 text-start">
                     <label class="form-label text-white">Cargo</label>
                     <div class="input-group">
                         <span class="input-group-text bg-transparent border-secundary">
@@ -77,18 +87,17 @@
                     </div>
                 </div>
 
-                <button class="btn btn-cadastro w-50 text-white mt-4" style=" background: #03c356; border-radius: 25px;"
+                <button class="btn btn-cadastro w-50 text-white mt-2" style=" background: #03c356; border-radius: 25px;"
                     type="submit" id="botao-cadastro">Cadastrar</button>
 
             </form>
             <div class="d-flex justify-content-center">
                 <a class=" btn-voltar-login text-white mt-2 d-flex justify-content-center"
-                    style="text-decoration: none;" href="{{ url_for('novo_login') }}">Voltar Para Login</a>
+                    style="text-decoration: none;" href="{{ url_for('novo_login') }}">Voltar para login</a>
             </div>
-            <div class="mt-4 mb-4 text-white" style="font-size:13px;">
-                ©VETALLIS - Gerenciamento de estoque
-            </div>
-
+                <div class=" mt-2  mb-2 text-white " style="font-size:13px;">
+                    ©VETALLIS - Gerenciamento de estoque
+                </div>
         </div>
 
     </div>
